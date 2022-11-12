@@ -1,0 +1,16 @@
+name: spacenet7
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - matplotlib
+  - earthpy
+  - jupyter
+  - pytorch
+  - torchvision
+  - scikit-image
+  - descartes
+  - tqdm
+  - imgaug
+  - albumentations
+prefix: ./envs/spacenet7

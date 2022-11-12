@@ -1,0 +1,11 @@
+version: "3"
+services:
+  spacenet-notebooks:
+    build:
+      context: notebooks
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/notebook
