@@ -1,15 +1,23 @@
-# base image
 FROM continuumio/miniconda3
 
-# copy the lockfile into the image
-#COPY conda-linux-64.lock conda-linux-64.lock
-COPY environment.yml environment.yml 
+RUN apt-get update --yes && \
+    apt-get install --yes --no-install-recommends \
+    build-essential \
+    # for latex labels
+    cm-super \
+    dvipng \
+    # for matplotlib anim
+    ffmpeg && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# restore the conda environment from the lockfile
-RUN conda env create --file environment.yml
+# Update conda.
+RUN conda update -n base -c defaults conda
 
-# copy script into image
-#COPY my-script.py .
+# Create the environment:
+COPY environment.yaml .
+RUN conda env create -f environment.yaml && \
+    conda clean --all -f -y
 
-# run script when container starts
-ENTRYPOINT ["jupyter", "lab", "--notebook-dir=/notebook/"]
+WORKDIR /home
+
+ENTRYPOINT ["conda", "run", "-n", "spacenet", "jupyter", "lab", "--ip=0.0.0.0", "--port=8080", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]

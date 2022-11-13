@@ -1,0 +1,19 @@
+name: spacenet
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyterlab
+  - python=3.10.6
+  - matplotlib
+  - pandas
+  - earthpy
+  - pytorch
+  - torchvision
+  - scikit-learn
+  - scikit-image
+  - descartes
+  - tqdm
+  - imgaug
+  - albumentations
+  - ipywidgets
