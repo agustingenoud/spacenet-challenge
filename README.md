@@ -1,10 +1,11 @@
 <h1 align="center">
-	Spacenet Challenge
+	Spacenet Challenge #7
 </h1>
 
 <h3 align="center">
-	Containarized data exploration and implementation of Spacenet Cahllenge
+	Containarized data exploration and implementation of Spacenet Cahllenge #7
 </h3>
+<br>
 
 <p align="center">
 	<img src="https://img.shields.io/github/repo-size/agustingenoud/spacenet-challenge?color=green"/>
@@ -23,10 +24,38 @@
 ## Installation
 To Install this project, follow the steps above:
 
+
+Clone this repository
+
 ```bash
-# Clone this repository
-# Get the data into data folder
+  git clone git@github.com:agustingenoud/spacenet-challenge.git
 ```
+
+
+Get the data into data folder:
+link to [challenge](https://spacenet.ai/sn7-challenge/)
+
+The challenge is on this [link](https://spacenet.ai/sn7-challenge/ "link to challenge")
+
+You can see the dataset with an aws account though this command:
+
+	`aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/ `
+
+The data folder should be organized like this:
+
+```
+root/
+├─ data/
+│  ├─ output_csvs/
+│  ├─ sample/
+│  ├─ test_public
+│  ├─ train/
+├─ notebooks/
+│  ├─ ..........
+│  ├─ ..........
+├─ (this) README.me
+```
+
 
 Run:
 ```bash
