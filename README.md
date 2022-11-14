@@ -28,7 +28,7 @@ To Install this project, follow the steps above:
 Clone this repository
 
 ```bash
-  git clone git@github.com:agustingenoud/spacenet-challenge.git
+	git clone git@github.com:agustingenoud/spacenet-challenge.git
 ```
 
 
@@ -36,8 +36,10 @@ Get the data into "data folder":
 The challenge is on this [link](https://spacenet.ai/sn7-challenge/ "link to challenge")
 
 You can see the dataset with an aws account though this command:
-
-	`aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/`
+```bash
+	aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/
+```
+	
 
 The tarballs for all the data are here:
 ```bash
@@ -67,7 +69,7 @@ root/
 
 To START run:
 ```bash
-./control-env start
+	./control-env start
 ```
 It will check your system for docker images and if not It will build them,
 run the containers and open your prefered web browser with the notebook files.
@@ -75,12 +77,12 @@ run the containers and open your prefered web browser with the notebook files.
 
 To STOP run:
 ```bash
-./control-env stop
+	./control-env stop
 ```
 
 To clean your system from the builded images run:
 ```bash
-./control-env clean
+	./control-env clean
 ```
 
 ### Scripts / Notebooks
