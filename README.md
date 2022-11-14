@@ -40,11 +40,14 @@ You can see the dataset with an aws account though this command:
 	`aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/`
 
 The tarballs for all the data are here:
-	`aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/tarballs/`
+```bash
+	aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/tarballs/
+```
 
 You can copy them like this into your current folder (ca. 12GB):
-	`aws s3 cp s3://spacenet-dataset/spacenet/SN7_buildings/tarballs/ .`
-
+```bash
+	aws s3 cp s3://spacenet-dataset/spacenet/SN7_buildings/tarballs/ .
+```
 
 The data folder should be organized like this:
 
@@ -79,3 +82,8 @@ To clean your system from the builded images run:
 ```bash
 ./control-env clean
 ```
+
+### Scripts / Notebooks
+Inside ```/work/notebooks``` there are the notebooks for data exploration analysis and dataframe manipulation. Most of them are refactorings from the notebooks in the [kaggle notebook library](https://www.kaggle.com/datasets/amerii/spacenet-7-multitemporal-urban-development) based on the subject.
+
+The prediction algorithm with the Neural Networks implementation could be found inside ```/work/code/0-predict.ipynb``` is based on the code developed by the second place (**cannab**) in the tournament which can be found [here](https://github.com/SpaceNetChallenge/SpaceNet7_Multi-Temporal_Solutions).

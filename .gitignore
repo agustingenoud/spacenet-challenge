@@ -1,1 +1,8 @@
-data
+notebooks/.ipynb_checkpoints
+notebooks/.jupyter
+notebooks/.local
+data/SN7_buildings_test_public.tar.gz
+data/SN7_buildings_train_csvs.tar.gz
+data/SN7_buildings_train_sample.tar.gz
+data/SN7_buildings_train.tar.gz
+data/.ipynb_checkpoints
