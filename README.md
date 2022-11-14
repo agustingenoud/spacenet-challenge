@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-	Containarized data exploration and implementation of Spacenet Cahllenge #7
+	Containarized data exploration and implementation of Spacenet challenge #7
 </h3>
 <br>
 
