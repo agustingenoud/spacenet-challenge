@@ -32,14 +32,19 @@ Clone this repository
 ```
 
 
-Get the data into data folder:
-link to [challenge](https://spacenet.ai/sn7-challenge/)
-
+Get the data into "data folder":
 The challenge is on this [link](https://spacenet.ai/sn7-challenge/ "link to challenge")
 
 You can see the dataset with an aws account though this command:
 
-	`aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/ `
+	`aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/`
+
+The tarballs for all the data are here:
+	`aws s3 ls s3://spacenet-dataset/spacenet/SN7_buildings/tarballs/`
+
+You can copy them like this into your current folder (ca. 12GB):
+	`aws s3 cp s3://spacenet-dataset/spacenet/SN7_buildings/tarballs/ .`
+
 
 The data folder should be organized like this:
 
@@ -57,8 +62,20 @@ root/
 ```
 
 
-Run:
+To START run:
 ```bash
 ./control-env start
 ```
+It will check your system for docker images and if not It will build them,
+run the containers and open your prefered web browser with the notebook files.
 
+
+To STOP run:
+```bash
+./control-env stop
+```
+
+To clean your system from the builded images run:
+```bash
+./control-env clean
+```
